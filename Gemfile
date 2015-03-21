@@ -29,7 +29,7 @@ gem 'httparty', '~> 0.13.3'
 
 group :development, :test do
   gem 'dotenv'
-  gem 'debugger'
+  # gem 'debugger'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
@@ -44,6 +44,8 @@ group :test do
   gem 'simplecov'
 end
 
+gem 'rails_12factor', group: :production
+ruby "2.2.0"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
