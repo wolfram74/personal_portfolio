@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 gem 'httparty', '~> 0.13.3'
+#for staticly loaded pages
+#https://github.com/thoughtbot/high_voltage
+gem 'high_voltage', '~> 2.2.1'
 
 group :development, :test do
   gem 'dotenv'
