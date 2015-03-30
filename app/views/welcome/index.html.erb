@@ -2,13 +2,39 @@
 
 
 <div id="header">
-  <h2>Too Clever By Half</h2>
+  <a href="#">
+    <h2>Too Clever By Half</h2>
+  </a>
+  
   <ul>
-    <li><%=link_to("Projects", projects_path)%></li>
-    <li>Curricula Vitae</li>
-    <li>Contact and Social Media</li>
-    <li>Blog Posts</li>
-    <li>Collaborators</li>
+    <li>
+      <%=link_to("Projects", projects_path)%>
+    </li>
+
+    <li>
+      <a href="/pages/cv">
+        Curricula Vitae
+      </a>
+    </li>
+
+    <li>
+      <a href="/pages/contact">
+        Contact and Social Media
+      </a>
+    </li>
+
+    <li>
+      <a href="/articles">
+        Blog Posts
+      </a>
+    </li>
+
+    <li>
+      <a href="/collaborators">
+        Collaborators
+      </a>
+    </li>
+
   </ul>
 </div>
 <div id="stage">
@@ -52,3 +78,30 @@
   </div>
 </script>
 <!-- end projects directory -->
+
+<!--CV template-->
+<script id="cvIndex" type="text/x-handlebars-template">
+  <div id="cv_frame">
+    <object id="resume" data="pdf/Peter_Haugen_CV.pdf" type="application/pdf" height="1066px" width="830px"></object>
+  </div>
+</script>
+<!--end  -->
+
+<!--social media contact  template-->
+<script id="socialMediaIndex" type="text/x-handlebars-template">
+
+</script>
+<!--end  -->
+
+<!--blog directory template-->
+<script id="blogIndex" type="text/x-handlebars-template">
+
+</script>
+<!--end  -->
+
+<!--collaborators template-->
+<script id="collaboratorsIndex" type="text/x-handlebars-template">
+
+</script>
+<!--end  -->
+
