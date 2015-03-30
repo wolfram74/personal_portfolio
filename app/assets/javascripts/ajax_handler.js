@@ -8,9 +8,6 @@ function bindEvents(){
 
 function headerGrab(){
   event.preventDefault();
-  shout()
-  console.log(event)
-  console.log(this.href)
   $.ajax({
     type:"GET",
     url: this.href
