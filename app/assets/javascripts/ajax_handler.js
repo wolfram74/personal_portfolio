@@ -12,6 +12,12 @@ function headerGrab(){
     grabProjects(this.href)
   } else if (this.href.indexOf("cv")>-1){
     grabCV(this.href)
+  } else if (this.href.indexOf("contact")>-1){
+    grabContact(this.href)
+  } else if (this.href.indexOf("collab")>-1){
+    grabCollaborators(this.href)
+  } else if (this.href.indexOf("cv")>-1){
+    grabCV(this.href)
   }else if (this.href.indexOf("#")>-1){
     homeLoad()
   };
@@ -24,10 +30,20 @@ function grabProjects(url){
   }).done(loadProjects);
 }
 
+function grabCollaborators(url){
+  $.ajax({
+    type:"GET",
+    url: url
+  }).done(loadCollaborators);
+}
+
 function grabCV(url){
   loadCV();
 }
 
+function grabContact(url){
+  loadContact();
+}
 
 
 function loadProjects(objects){
@@ -38,8 +54,24 @@ function loadProjects(objects){
   viewHandler(rendered);
 };
 
+function loadCollaborators(objects){
+  var source = $("#collaboratorsIndex").html();
+  var template = Handlebars.compile(source);
+  var context = {projects: objects};
+  var rendered = template(context);
+  viewHandler(rendered);
+};
+
 function loadCV(){
   var source = $("#cvIndex").html();
+  var template = Handlebars.compile(source);
+  var context = {};
+  var rendered = template(context);
+  viewHandler(rendered);
+};
+
+function loadContact(){
+  var source = $("#contactIndex").html();
   var template = Handlebars.compile(source);
   var context = {};
   var rendered = template(context);

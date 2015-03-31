@@ -87,9 +87,42 @@
 </script>
 <!--end  -->
 
-<!--social media contact  template-->
-<script id="socialMediaIndex" type="text/x-handlebars-template">
+<!--contact and social media   template-->
+<script id="contactIndex" type="text/x-handlebars-template">
+  <div id="contact_frame">
+    <ul>
+      <li>
+        <a href="mailto:phaugen@gmail.com">
+          Email
+        </a>
+      </li>
 
+      <li>
+        <a href="https://github.com/wolfram74">
+          Github
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/peterthaugen">
+          LinkedIn
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://twitter.com/nomadicphysics">
+          Twitter
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://www.facebook.com/peter.haugen.9">
+          Facebook
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 </script>
 <!--end  -->
 
@@ -101,6 +134,26 @@
 
 <!--collaborators template-->
 <script id="collaboratorsIndex" type="text/x-handlebars-template">
+  <div id="collaborators_list">
+    <ul>
+    {{#each projects}}
+      <li>
+      <div id={{name}}>
+        <a href ="{{url}}">
+          <h3>{{name}}</h3>
+        </a>
+        <p class="body">
+          {{description}}
+        </p>
+
+        <div class="footer">
+          <a href ="mailto:{{email}}"> email </a>
+        </div>
+      </div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
 
 </script>
 <!--end  -->

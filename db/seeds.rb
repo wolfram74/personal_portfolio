@@ -19,3 +19,17 @@ projects = [
 projects.each do |proj|
   Project.create(proj)
 end
+
+collaborators = [
+  # {name:"", email: "",url:"", description:"" },
+  # {name:"", email: "",url:"", description:"" },
+  # {name:"", email: "",url:"", description:"" },
+  # {name:"", email: "",url:"", description:"" },
+  {name:"Tobias Merkle", email: "tgamerkle@gmail.com", url:"", description:"A writer with an exceptionally broad talent base, fluent in Chinese, background in linquistics and rudiments of programming." },
+  {name:"Paul Hlebowitsh", email: "phleb@mit.edu",url:"", description:"An electrical engineer with loads of experience and strong mathematical background" },
+  {name:"Soren Peterson", email: "soren468@gmail.com",url:"http://www.otterhive.com", description:"An up and coming full stack developer with an intense emphasis on solid programming foundations" }
+]
+
+collaborators.each do |proj|
+  Collaborator.create(proj)
+end
