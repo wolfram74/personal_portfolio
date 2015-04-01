@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 function bindEvents(){
   $("#header").on("click", "a", headerGrab);
+  $("#stage").on("click", "a.article", articleIndexGrab);
 }
 
 function headerGrab(){
@@ -16,8 +17,8 @@ function headerGrab(){
     grabContact(this.href)
   } else if (this.href.indexOf("collab")>-1){
     grabCollaborators(this.href)
-  } else if (this.href.indexOf("cv")>-1){
-    grabCV(this.href)
+  } else if (this.href.indexOf("artic")>-1){
+    grabArticles(this.href)
   }else if (this.href.indexOf("#")>-1){
     homeLoad()
   };
@@ -28,6 +29,13 @@ function grabProjects(url){
     type:"GET",
     url: url
   }).done(loadProjects);
+}
+
+function grabArticles(url){
+  $.ajax({
+    type:"GET",
+    url: url
+  }).done(loadArticles);
 }
 
 function grabCollaborators(url){
@@ -50,6 +58,17 @@ function loadProjects(objects){
   var source = $("#projectsIndex").html();
   var template = Handlebars.compile(source);
   var context = {projects: objects};
+  var rendered = template(context);
+  viewHandler(rendered);
+};
+
+function loadArticles(objects){
+  // console.log(objects);
+  // debugger
+  var source = $("#articlesIndex").html();
+  var template = Handlebars.compile(source);
+  objects = fomartArtciles(objects);
+  var context = {articles: objects};
   var rendered = template(context);
   viewHandler(rendered);
 };
@@ -78,10 +97,25 @@ function loadContact(){
   viewHandler(rendered);
 };
 
+function fomartArtciles(articles){
+  console.log(articles)
+  // debugger
+  for(var i in articles){
+    // console.log(article.content)
+    articles[i].rawParagraphs = articles[i].content.split("\n\n");
+    articles[i].paragraphs = [];
+    for(var j in articles[i].rawParagraphs){
+      articles[i].paragraphs[j] = articles[i].rawParagraphs[j].split("\n");
+    };
+    articles[i].lead = articles[i].paragraphs[0]
+  };
+  console.log(articles)
+  return articles;
+};
+
 function homeLoad(){
   $("#stage").children().hide()
   $("#start_point").show()
-
 };
 
 function viewHandler(newSection){
@@ -90,5 +124,6 @@ function viewHandler(newSection){
 };
 
 function shout(){
+  event.preventDefault();
   console.log("EVERYTHING IS HAPPENING?!S")
 }

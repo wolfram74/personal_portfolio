@@ -79,6 +79,81 @@
 </script>
 <!-- end projects directory -->
 
+
+<!--blog directory template-->
+<script id="articlesIndex" type="text/x-handlebars-template">
+    <div id="articles_list">
+  {{#each articles}}
+    <div id="article_{{id}}_blurb}">
+      <a href ="/articles/{{id}}" class="article">
+        <h3>{{title}}</h3>
+        <h4>{{subtitle}}</h4>
+      </a>
+      <div class="published_on">
+        {{published_on}}
+      </div>
+      <div class="content">
+        <p>
+          {{#each lead}}
+            {{this}} <br>
+          {{/each}}
+        </p>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+</script>
+<!--end  -->
+
+<!--article template-->
+<script id="articlesShow" type="text/x-handlebars-template">
+    <div id="article_{{id}}_main">
+      <a href ="/articles/{{id}}" >
+        <h3>{{title}}</h3>
+        <h4>{{subtitle}}</h4>
+      </a>
+      <div class="published_on">
+        {{published_on}}
+      </div>
+      <div class="content">
+        {{#each paragraphs}}
+          <p>
+          {{#each this}} 
+            {{this}}<br>
+          {{/each}}
+          </p>
+        {{/each}}
+      </div>
+  {{/each}}
+  </div>
+</script>
+<!--end  -->
+
+<!--collaborators template-->
+<script id="collaboratorsIndex" type="text/x-handlebars-template">
+  <div id="collaborators_list">
+    <ul>
+    {{#each projects}}
+      <li>
+      <div id={{name}}>
+        <a href ="{{url}}">
+          <h3>{{name}}</h3>
+        </a>
+        <p class="body">
+          {{description}}
+        </p>
+
+        <div class="footer">
+          <a href ="mailto:{{email}}"> email </a>
+        </div>
+      </div>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</script>
+<!--end  -->
+
 <!--CV template-->
 <script id="cvIndex" type="text/x-handlebars-template">
   <div id="cv_frame">
@@ -125,36 +200,3 @@
   </div>
 </script>
 <!--end  -->
-
-<!--blog directory template-->
-<script id="blogIndex" type="text/x-handlebars-template">
-
-</script>
-<!--end  -->
-
-<!--collaborators template-->
-<script id="collaboratorsIndex" type="text/x-handlebars-template">
-  <div id="collaborators_list">
-    <ul>
-    {{#each projects}}
-      <li>
-      <div id={{name}}>
-        <a href ="{{url}}">
-          <h3>{{name}}</h3>
-        </a>
-        <p class="body">
-          {{description}}
-        </p>
-
-        <div class="footer">
-          <a href ="mailto:{{email}}"> email </a>
-        </div>
-      </div>
-      </li>
-    {{/each}}
-    </ul>
-  </div>
-
-</script>
-<!--end  -->
-

@@ -33,3 +33,19 @@ collaborators = [
 collaborators.each do |proj|
   Collaborator.create(proj)
 end
+
+articles = [
+  {title:"test article 1", subtitle:"a handful of vespers",content:"this is a test of the emergency broadcast system.
+
+    If this had not been a test instructions would have accompanied this announcement."},
+  {title:"test article 2", subtitle:"a modest proposal",content:"This limerick goes in reverse
+unless I'm remiss
+the neat thing is this:
+if you start from the bottom-most verse
+this limerick's not any worse.
+
+lets see if line insertions as well paragraph testing works. <a href='http://www.smbc-comics.com/?id=3201#comic'>source</a> link insertion!"}
+]
+articles.each do |artic|
+  Article.create(artic)
+end
