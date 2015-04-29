@@ -29,6 +29,7 @@ gem 'httparty', '~> 0.13.3'
 #for staticly loaded pages
 #https://github.com/thoughtbot/high_voltage
 gem 'high_voltage', '~> 2.2.1'
+gem 'simple_form'
 
 group :development, :test do
   gem 'dotenv'
