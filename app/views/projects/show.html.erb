@@ -1,4 +1,9 @@
 <div id="projects_editing">
-  <%= render partial: "project_list", locals: {project: @project}%>
-  <%= form_tag({controller:"projects", action: "edit", method: "get"}) %>
+  <%= render partial: "project_list", locals: {project: @project, daily: @daily_pass}%>
+  <%= simple_form_for @project do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :file_name %>
+    <%= f.button :submit %>
+  <% end  %>
 </div>

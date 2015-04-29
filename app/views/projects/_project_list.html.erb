@@ -1,8 +1,14 @@
 <div id= <%= "project_id_%d" % project.id %> >
-  <%= project.title %>
+  <a href = "/projects/<%= "%d/?admin_pass=%s" % [project.id, daily] %>"><%= project.title %></a>
   <br>
   <%= project.description %>  
   <br>
   <%= project.file_name %>
+  <br>
+  <%= button_to("End it's existence", project, method: :delete
+   # {action: "destroy", 
+   #  id: project.id, 
+   #  method: :delete}
+    ) %>
   
 </div>
