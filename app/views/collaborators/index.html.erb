@@ -1,0 +1,19 @@
+<div class = "collaborats_index">
+  <%= simple_form_for @new_collaborator do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :url %>
+    <%= f.button :submit %>
+  <% end %>
+  
+  <% @collaborators.each do |col| %>
+    <a href="/collaborators/<%= "%d/?admin_pass=%s" % [col.id, @daily_pass] %>">
+      <%= col.name %>
+    </a><br>
+    <%= col.email %><br>
+    <%= col.url %><br>
+    <%= col.description %><br>
+    <%= button_to("End it's existence", col, method: :delete) %><br>
+  <% end %>
+</div>

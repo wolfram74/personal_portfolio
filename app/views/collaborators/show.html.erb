@@ -1,0 +1,9 @@
+<div class = "edit_collaborator">
+  <%= simple_form_for @collaborator do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :url %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
