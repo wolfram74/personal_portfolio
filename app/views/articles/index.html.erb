@@ -1,0 +1,18 @@
+<div class = "articles_index">
+  <%= simple_form_for @new_article do |f| %>
+    <%= f.input :title %>
+    <%= f.input :subtitle %>
+    <%= f.input :content, as: :text %>
+    <%= f.button :submit %>
+  <% end %>
+  
+  <% @articles.each do |art| %>
+    <a href="/articles/<%= "%d/?admin_pass=%s" % [art.id, @daily_pass] %>">
+      <%= art.title %>
+    </a><br>
+    <%= art.subtitle %><br>
+    <%= art.content %><br>
+    <%= button_to("End it's existence", art, method: :delete) %><br>
+  <% end %>
+
+</div>

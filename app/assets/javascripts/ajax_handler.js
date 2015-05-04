@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("I finished being ready")
   bindEvents();
 });
 
