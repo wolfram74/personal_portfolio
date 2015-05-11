@@ -107,24 +107,23 @@
 
 <!--article template-->
 <script id="articlesShow" type="text/x-handlebars-template">
-    <div id="article_{{id}}_main">
-      <a href ="/articles/{{id}}" >
-        <h3>{{title}}</h3>
-        <h4>{{subtitle}}</h4>
-      </a>
-      <div class="published_on">
-        {{published_on}}
-      </div>
-      <div class="content">
-        {{#each paragraphs}}
-          <p>
-          {{#each this}} 
-            {{this}}<br>
-          {{/each}}
-          </p>
+  <div id="article_{{id}}_main">
+    <a href ="/articles/{{id}}" >
+      <h3>{{title}}</h3>
+      <h4>{{subtitle}}</h4>
+    </a>
+    <div class="published_on">
+      {{published_on}}
+    </div>
+    <div class="content">
+      {{#each paragraphs}}
+        <p>
+        {{#each this}} 
+          {{this}}<br>
         {{/each}}
-      </div>
-  {{/each}}
+        </p>
+      {{/each}}
+    </div>
   </div>
 </script>
 <!--end  -->
@@ -133,7 +132,7 @@
 <script id="collaboratorsIndex" type="text/x-handlebars-template">
   <div id="collaborators_list">
     <ul>
-    {{#each projects}}
+    {{#each collabs}}
       <li>
       <div id={{name}}>
         <a href ="{{url}}">

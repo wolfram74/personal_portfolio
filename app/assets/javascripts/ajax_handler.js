@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
 
 function bindEvents(){
-  $("#header").on("click", "a", headerGrab);
+  $("#header").on("click", "a", headerGrab2);
   $("#stage").on("click", "a.article", articleIndexGrab);
 }
 
@@ -53,7 +53,6 @@ function grabCV(url){
 function grabContact(url){
   loadContact();
 }
-
 
 function loadProjects(objects){
   var source = $("#projectsIndex").html();
