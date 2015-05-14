@@ -1,0 +1,38 @@
+* {
+  border: 1px dashed;
+}
+#header{
+  margin-left: 10%;
+  margin-right: 10%;  
+}
+
+#header h2{
+}
+
+#header ul{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+#header li {
+  display: table-cell;
+  width: 19%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#stage{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#projects_list div{
+  display: table-cell;
+  width: 33%;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}

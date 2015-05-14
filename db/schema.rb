@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150421200657) do
     t.text     "subtitle"
     t.text     "content"
     t.boolean  "published",    default: true
-    t.date     "published_on", default: '2015-04-01'
+    t.date     "published_on", default: '2015-05-13'
     t.datetime "created_at"
     t.datetime "updated_at"
   end
