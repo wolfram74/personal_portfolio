@@ -67,7 +67,7 @@ function loadArticles(objects){
   // debugger
   var source = $("#articlesIndex").html();
   var template = Handlebars.compile(source);
-  objects = fomartArtciles(objects);
+  objects = formatArticles(objects);
   var context = {articles: objects};
   var rendered = template(context);
   viewHandler(rendered);
@@ -97,7 +97,7 @@ function loadContact(){
   viewHandler(rendered);
 };
 
-function fomartArtciles(articles){
+function formatArticles(articles){
   console.log(articles)
   // debugger
   for(var i in articles){
@@ -122,8 +122,3 @@ function viewHandler(newSection){
   $("#stage").children().hide()
   $("#stage").append(newSection)
 };
-
-function shout(){
-  event.preventDefault();
-  console.log("EVERYTHING IS HAPPENING?!S")
-}
