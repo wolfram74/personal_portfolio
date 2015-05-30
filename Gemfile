@@ -32,6 +32,7 @@ gem 'httparty', '~> 0.13.3'
 gem 'high_voltage', '~> 2.2.1'
 gem 'simple_form'
 gem "figaro"
+gem "twilio-ruby"
 
 group :development, :test do
   gem 'dotenv'

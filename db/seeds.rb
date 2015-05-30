@@ -11,10 +11,18 @@ projects = [
   # {title:"" ,description:"",file_name:""},
   # {title:"" ,description:"",file_name:""},
   # {title:"" ,description:"",file_name:""},
-  # {title:"" ,description:"",file_name:""},
-  # {title:"" ,description:"",file_name:""},
-  {title:"Mandelbrot Explorer" ,description:"A little app exploring the canvas manipulation methods to draw and explore the mandelbrot set.",file_name:"mandelbrot"},
-  {title:"Spectrogram" ,description:"Taking advantage of the powerful WebAudio API, if you give access to your mic, this can generate a live audio spectrogram of your surroundings, best performance on chrome.",file_name:"spectrogram"}
+  {title:"Perfect Shuffle" ,
+    description:"A Perfect Shuffle, also known as a Faro Shuffle is actually super predictable, and this little javascript toy demonstrates it while occasionally quite pleasing patterns.",
+    file_name:"perfect_shuffle"},
+  {title:"Speckled Moths" ,
+    description:"An interactive simulation built with the intent of exercising good OOJS techniques, click on Moths to make Predators that eat moths and see how the population changes over time.",
+    file_name:"moths"},
+  {title:"Mandelbrot Explorer" ,
+    description:"A little app exploring the canvas manipulation methods to draw and explore the mandelbrot set.",
+    file_name:"mandelbrot"},
+  {title:"Spectrogram" ,
+    description:"Taking advantage of the powerful WebAudio API, if you give access to your mic, this can generate a live audio spectrogram of your surroundings, best performance on chrome.",
+    file_name:"spectrogram"}
 ]
 projects.each do |proj|
   Project.create(proj)

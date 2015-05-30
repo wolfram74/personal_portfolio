@@ -6,7 +6,7 @@
     <h2>Too Clever By Half</h2>
   </a>
   
-  <ul>
+  <ul class = "displayboard">
     <li class="gutters-d gutters-t span-2-t span-2-d">
       <%=link_to("Projects", projects_path)%>
     </li>
@@ -58,15 +58,15 @@
     Some links
   </div>
   <div id="footer_signoff">
-    The time is now: <%= Time.now %>
+    Have you tried using logarithms?
   </div>
    
 </div>
 <!-- Projects directory template -->
 <script id="projectsIndex" type="text/x-handlebars-template">
-  <div id="projects_list">
+  <div id="projects_list" class = "displayboard">
   {{#each projects}}
-    <div id={{file_name}}>
+    <div id={{file_name}} class = "span-5-t span-3-d">
       <a href ="/pages/{{file_name}}">
         <h3>{{title}}</h3>
       </a>
@@ -130,11 +130,11 @@
 
 <!--collaborators template-->
 <script id="collaboratorsIndex" type="text/x-handlebars-template">
-  <div id="collaborators_list">
-    <ul>
+  <div id="collaborators_list" >
+    <ul class = "displayboard">
     {{#each collabs}}
-      <li>
-      <div id={{name}}>
+      <li class = "span-5-t span-3-d">
+      <div id="{{name}}" >
         <a href ="{{url}}">
           <h3>{{name}}</h3>
         </a>

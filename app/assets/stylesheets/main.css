@@ -86,9 +86,55 @@ ul, ol {
 .bdw-1{border-width: 1px;}
 .bdc-fog{border-color: #e1e8ed;}
 
+.displayboard {
+  display:flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
+* {
+  /*border: 1px dashed;*/
+}
+#header{
+  padding-bottom: 2em;
+}
 
+#header h2{
+}
+
+#header ul{
+}
+
+
+#header li {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: .5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#stage{
+}
+
+#projects_list div{
+  text-align: center;
+  border: 1px solid;
+  border-radius: .5em;
+}
+
+#collaborators_list li{
+  display: inline-block;
+  text-align: center;
+  border: 1px solid;
+  border-radius: .5em;
+}
+
+#cv_frame {
+  text-align: center;
+}
 
 /* ==========================================================================
    Media Queries
@@ -215,42 +261,4 @@ ul, ol {
     h3 {
         page-break-after: avoid;
     }
-}
-
-* {
-  border: 1px dashed;
-}
-#header{
-/*  margin-left: 10%;
-  margin-right: 10%;  
-*/}
-
-#header h2{
-}
-
-#header ul{
-}
-
-
-#header li {
-  /*display: table-cell;*/
-  display: inline-block;
-/*  width: 19%;
-  height: 100%;
-*/  text-align: center;
-  border: 1px solid;
-  border-radius: .5em;
-}
-
-#stage{
-/*  margin-left: 10%;
-  margin-right: 10%;
-*/}
-
-#projects_list div{
-  display: table-cell;
-  width: 33%;
-  text-align: center;
-  border: 1px solid;
-  border-radius: .5em;
 }

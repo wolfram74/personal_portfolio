@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :collaborators
   resources :articles
+
+  post 'twilio/voice' => 'twilio#voice'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
