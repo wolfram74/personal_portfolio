@@ -14,4 +14,13 @@ class TwilioController < ApplicationController
     render_twiml response
   end
 
+  def text
+    response = Twilio::TwiML::Response.new do |r|
+      r.Sms 'Fart noises', to: "+13193257978"
+    end
+    render_twiml response
+  end
+
+
+
 end

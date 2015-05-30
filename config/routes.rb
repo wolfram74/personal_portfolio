@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :articles
 
   post 'twilio/voice' => 'twilio#voice'
+  post 'twilio/text' => 'twilio#text'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
