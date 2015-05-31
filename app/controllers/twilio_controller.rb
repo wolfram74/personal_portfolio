@@ -15,10 +15,16 @@ class TwilioController < ApplicationController
   end
 
   def text
-    response = Twilio::TwiML::Response.new do |r|
-      r.Sms 'Fart noises', to: "+13193257978"
-    end
-    render_twiml response
+    twilio_sid = Figaro.env.twilio_sid
+    twilio_token = Figaro.env.twilio_token
+    out_num = Figaro.env.twilio_out_num
+    in_num = Figaro.env.my_num
+    @client = Twilio::REST::Client.new(twilio_sid, twilio_token)
+    @client.messages.create({from: out_num ,to:in_num, body: 'fartnoises'})
+    # response = Twilio::TwiML::Response.new do |r|
+    #   r.Sms 'Fart noises', to: "+13193257978"
+    # end
+    # render_twiml response
   end
 
 
