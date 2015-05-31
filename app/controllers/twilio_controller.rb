@@ -15,6 +15,7 @@ class TwilioController < ApplicationController
   end
 
   def text
+    p "hit route"
     twilio_sid = Figaro.env.twilio_sid
     twilio_token = Figaro.env.twilio_token
     out_num = Figaro.env.twilio_out_num
